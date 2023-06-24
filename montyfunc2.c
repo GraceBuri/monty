@@ -50,6 +50,11 @@ void swap(stack_t **stack, unsigned int line_number)
 */
 void add(stack_t **head, unsigned int line_number)
 {
+	 if (*head == NULL || (*head)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	(void) line_number;
 	(*head)->next->n += (*head)->n;
 	pop(head, 0);
@@ -61,6 +66,11 @@ void add(stack_t **head, unsigned int line_number)
 */
 void sub(stack_t **head, unsigned int line_number)
 {
+	if (*head == NULL || (*head)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	(void) line_number;
 	(*head)->next->n -= (*head)->n;
 	pop(head, 0);

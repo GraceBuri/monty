@@ -36,4 +36,6 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 		}
 		i++;
 	}
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, tokens[0]);
+	exit(EXIT_FAILURE);
 }
