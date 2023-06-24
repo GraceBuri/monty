@@ -10,7 +10,7 @@ void push(stack_t **stack, unsigned int line_number)
 	int n;
 	char *arg = input.arg;
 
-	if (!arg)
+	if (!arg && is_numeric(arg))
 	{
 		fprintf(stderr, "L%u: usage push integer\n", line_number);
 		return;

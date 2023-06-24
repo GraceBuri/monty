@@ -66,5 +66,6 @@ void mul(stack_t **head, unsigned int line_number);
 void divs(stack_t **head, unsigned int line_number);
 void mod(stack_t **head, unsigned int line_number);
 void free_stack(stack_t **head);
+int is_numeric(const char *str);
 void execute(char **tokens, stack_t **stack, unsigned int line_number);
 #endif
