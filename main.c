@@ -1,12 +1,11 @@
 #include "monty.h"
+user_input input = {0, NULL, 0};
 /**
  * main - my monty code intepreter
  * @argc: number of arguments from user
  * @argv: monty file
  * Return: 0 a success
  */
-user_input input = {0, NULL, 0};
-
 int main(int argc, char *argv[])
 {
 	char *lineptr = NULL;
