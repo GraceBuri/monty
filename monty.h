@@ -50,7 +50,6 @@ typedef struct user_input
   int line_number;
   char *arg;
   int num_tok;
-  int flag;
 }user_input;
 
 extern user_input input;
