@@ -20,6 +20,7 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 	{"div", divs},
 	{"mod", mod},
 	{"nop", nop},
+	{"pchar", pchar},
 	{NULL, NULL}
 
 };
