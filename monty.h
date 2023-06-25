@@ -70,6 +70,7 @@ void pchar(stack_t **head, unsigned int line_number);
 void free_stack(stack_t **head);
 void pstr(stack_t **head, unsigned int line_number);
 void rotl(stack_t **head, unsigned line_number);
+void rotr(stack_t **head, unsigned int line_number);
 int is_numeric(const char *str);
 void execute(char **tokens, stack_t **stack, unsigned int line_number);
 #endif

@@ -9,8 +9,7 @@
 void execute(char **tokens, stack_t **stack, unsigned int line_number)
 {
 	instruction_t ops[] = {
-	{"push", push},
-	{"pall", pall},
+	{"push", push}, {"pall", pall},
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
@@ -23,6 +22,7 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 	{"pchar", pchar},
 	{"pstr", pstr},
 	{"rotl", rotl},
+	{"rotr", rotr},
 	{NULL, NULL}
 
 };

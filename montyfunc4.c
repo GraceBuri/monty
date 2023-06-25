@@ -66,3 +66,23 @@ void rotl(stack_t **head, unsigned int line_number)
 	(*head)->prev = tmp;
 	(*head) = node;
 }
+/**
+ * rotr - rotates the stack
+ * @head: stack head
+ * @line_number: bytecode line being run
+*/
+void rotr(stack_t **head, unsigned int line_number)
+{
+	stack_t *tmp;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+	tmp = head;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *head;
+	tmp->prev->next = NULL;
+	tmp->prev = NULL;
+	(*head)->prev = tmp;
+	(*head) = tmp;
+}
