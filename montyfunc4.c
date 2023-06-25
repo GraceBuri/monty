@@ -74,10 +74,11 @@ void rotl(stack_t **head, unsigned int line_number)
 void rotr(stack_t **head, unsigned int line_number)
 {
 	stack_t *tmp;
+	(void) line_number;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return;
-	tmp = head;
+	tmp = *head;
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = *head;
