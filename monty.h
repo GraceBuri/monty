@@ -54,6 +54,7 @@ typedef struct user_input
 
 extern user_input input;
 char **tokenize(char *str);
+void nop(stack_t **stack, unsigned int line_number);
 void addnode(stack_t **stack, int n);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);

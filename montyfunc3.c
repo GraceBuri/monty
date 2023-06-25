@@ -84,3 +84,13 @@ int is_numeric(const char *str)
 
 	return (digit_count > 0);
 }
+/**
+ * nop - implementation of nop which is a function that does nothing
+ * @stack: pointer to the head of the stack
+ * @line_number: line that bytecode op is being searched
+*/
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void) stack;
+	(void) line_number;
+}
