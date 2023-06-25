@@ -42,3 +42,27 @@ void pstr(stack_t **head, unsigned int line_number)
 	}
 	printf("\n");
 }
+/**
+ * rotl - rotates the stack to the top
+ * @head: stacks first element
+ * @line_number: line byte code is running
+*/
+void rotl(stack_t **head, unsigned int line_number)
+{
+	stack_t *tmp, *node;
+	(void) line_number;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+
+	node = (*head)->next;
+	node->prev = NULL;
+	tmp = *head;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+
+	tmp->next = *head;
+	(*head)->next = NULL;
+	(*head)->prev = tmp;
+	(*head) = node;
+}

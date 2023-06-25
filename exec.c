@@ -22,6 +22,7 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 	{"nop", nop},
 	{"pchar", pchar},
 	{"pstr", pstr},
+	{"rotl", rotl},
 	{NULL, NULL}
 
 };
