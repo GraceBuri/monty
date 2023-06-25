@@ -1,5 +1,5 @@
 #include "monty.h"
-user_input input = {0, NULL, 0};
+user_input input = {0, NULL, 0, 0};
 /**
  * main - my monty code intepreter
  * @argc: number of arguments from user

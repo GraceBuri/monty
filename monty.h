@@ -50,6 +50,7 @@ typedef struct user_input
   int line_number;
   char *arg;
   int num_tok;
+  int flag;
 }user_input;
 
 extern user_input input;
@@ -71,6 +72,8 @@ void free_stack(stack_t **head);
 void pstr(stack_t **head, unsigned int line_number);
 void rotl(stack_t **head, unsigned line_number);
 void rotr(stack_t **head, unsigned int line_number);
+void fstack(stack_t **head, unsigned int line_number);
+void queue(stack_t **head, unsigned int line_number);
 int is_numeric(const char *str);
 void execute(char **tokens, stack_t **stack, unsigned int line_number);
 #endif

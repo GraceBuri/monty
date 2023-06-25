@@ -10,20 +10,14 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 {
 	instruction_t ops[] = {
 	{"push", push}, {"pall", pall},
-	{"pint", pint},
-	{"pop", pop},
-	{"swap", swap},
-	{"add", add},
-	{"sub", sub},
-	{"mul", mul},
-	{"div", divs},
-	{"mod", mod},
-	{"nop", nop},
-	{"pchar", pchar},
-	{"pstr", pstr},
-	{"rotl", rotl},
-	{"rotr", rotr},
-	{NULL, NULL}
+	{"pint", pint}, {"pop", pop},
+	{"swap", swap}, {"add", add},
+	{"sub", sub}, {"mul", mul},
+	{"div", divs}, {"mod", mod},
+	{"nop", nop}, {"pchar", pchar},
+	{"pstr", pstr}, {"rotl", rotl},
+	{"rotr", rotr}, {"stack", fstack},
+	{"queue", queue}, {NULL, NULL}
 
 };
 	int i = 0;
