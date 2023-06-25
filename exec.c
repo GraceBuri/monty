@@ -27,6 +27,8 @@ void execute(char **tokens, stack_t **stack, unsigned int line_number)
 
 	if (input.num_tok == 2)
 		input.arg = tokens[1];
+	if (tokens && tokens[0][0] == '#')
+		return;
 	if (tokens[0] == NULL)
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n", line_number, tokens[0]);
